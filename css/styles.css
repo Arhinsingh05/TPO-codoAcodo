@@ -1,0 +1,504 @@
+/* Uso un google font de 2 tipografías y lo importo aquí */
+
+@import url();
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif; 
+    background-color: hsl(37, 13%, 19%);
+}
+
+header {
+    width: 100%;
+}
+
+.header .main {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.navbar {
+    margin-top: 30px;
+
+}
+
+.navbar .brand {
+    display: flex;
+    margin: 20px 70px;
+    color: wheat;
+}
+
+.navbar .brand i {
+    font-size: 1.6em;
+}
+
+.navbar .brand h3 {
+    font-size: 1.3em;
+    margin: 5px 5px;
+}
+
+.menu ul{
+    display: flex;
+    justify-content: center;
+    margin: 0px 20px;
+
+}
+
+.menu ul li{
+    list-style: none;
+    margin-right: 70px;
+
+}
+
+.menu ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.3em;
+}
+
+.menu ul li a:hover {
+    color: wheat;
+}
+
+.navbar .boton-menu {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 25px;
+}
+
+.navbar .boton-menu i {
+    font-size: 1.8em;
+    cursor: pointer;
+    color: white;
+    display: none;  /*Oculto en pantalla grande, solo aparece en pantalla chica */
+}
+
+.container-info {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    font-family: 'Permanent Marker', cursive;
+    margin-top: 50px;
+}
+
+.container-info h1 {
+    font-size: 5em;
+    animation: left-move 1s ease-in;
+}
+
+.container-info h2 {
+    font-size: 2em;
+    animation: right-move 1s ease-in;
+}
+
+.container-info .btn {
+    font-size: 1.5em;
+    margin-top: 15px;
+    width: 200px;
+    padding: 5px;
+    border-radius: 50px;
+    background-color: wheat;
+    border: none;
+    color: white;
+    animation: right-move 1s ease-in;
+}
+
+.container-info .img-content img {
+    max-width: 100%;
+    animation: up-move 1s ease-in;
+}
+
+.container-info .img-content img:hover {
+    filter: grayscale(60%);
+}
+
+.container-info .social-content li {
+    list-style: none;
+    margin: 20px;
+}
+
+.container-info .social-content i{
+    font-size: 1.3em;
+    color: wheat;
+    animation: left-move 1s ease-in;
+}
+
+.container-info .social-content i:hover {
+    transform: scale(1.5)
+}
+
+header .wave {
+    margin-top: 150px;
+}
+
+.exposiciones {
+    background-color: #ffff;
+    height: 100vh;
+}
+
+
+/*----------------- Footer ---------------------*/
+
+footer {
+    width: 100%;
+    background: wheat;
+    margin-top: 200px;
+    padding: 10px 0;
+    font-family: sans-serif;
+    color:hsl(37, 13%, 19%);
+  }
+  
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  
+  .contact {
+    width: 40%;
+    text-align: center;
+  }
+  
+  .brand{
+    font-weight: 600;
+    font-size: 25px;
+    margin-left: 10px;
+  }
+  
+
+  .footer a {
+    display:flex;
+    text-decoration: none;
+    color:hsl(37, 13%, 19%);
+    transition: color .3s ease-in-out;
+    margin-bottom: 20px;
+  }
+  
+.footer .social-content i{
+    font-size: 1.3em;
+    color: rgb(61, 53, 39);
+    animation: left-move 1s ease-in;
+    cursor: pointer;
+}
+
+.footer .social-content i:hover {
+    transform: scale(1.5)
+}
+  
+  .line {
+    height: 2px;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    background: wheat;
+  }
+  
+
+/*---------------- Contacto -------------------*/
+
+.main-contacto {
+    display: flex;
+    overflow: auto;
+    margin-bottom: 30px;
+  }
+  
+  .ubicacion { 
+    float: right; 
+    margin: 90px 10px 10px 40px;
+  }
+  
+.titulo-contacto {
+    font-size: 2.5rem;
+    color: rgb(21, 37, 107);
+    font-family: 'fuente', Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 90px 15px 20px 10px;
+  }
+  
+  .contacto {
+    float: right;
+    margin: 50px 20px;
+  } 
+  
+  .nombre,.apellido,.email,.asunto,.mensaje {
+    font-family: sans-serif;
+    width: 403px;
+    height: 35px;
+    border: rgb(253, 200, 101) 2px solid;
+  }
+  
+  .asunto {
+    width: 403px;
+    height: 35px;
+    margin-bottom: 2px;
+    color:#676d77;
+  }
+  
+  .mensaje {
+    height: 100px;
+    overflow: scroll;
+  }
+  
+  .boton_enviar {
+    width: 100px;
+    height: 35px;
+    color: rgb(61, 53, 39);
+    background-color: wheat;
+    font-family: sans-serif;
+    font-size: 1rem;
+    border: rgb(253, 200, 101) 2px solid;
+    margin-left: 150px;
+  }
+  
+  .boton_enviar:hover {
+    border: white 1px solid;
+    background-color: rgb(136, 121, 94);
+  }
+  
+  /* Breakpoints responsive: contacto.html */
+  
+  @media screen and (max-width: 1265px) {
+    .main-contacto {
+      margin-bottom: -261px;
+    }
+  }
+  
+  @media screen and (max-width: 1280px) {
+    .mapa {
+      margin: 15px 100px 20px 80px;
+    }
+  }
+  @media screen and (max-width: 1110px) {
+    .header-pag {
+      padding-top: 0px;
+    }
+  }
+  
+
+/* Para que la barra de menu se coloque como columna en pantallas de 600px para arriba */
+@media (max-width: 650px) {
+
+    .navbar .brand i{
+        margin-left: -30px;
+    }
+
+    .navbar .boton-menu i {
+        display: block;
+        margin: -60px 30px;
+    }
+
+    .navbar .menu ul {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-color: hsl(37, 13%, 19%);
+        position: fixed;
+        margin-top: 40px;
+        
+        /* Llevo el menu hacia la izq: */
+        transform: translateX(-120%);
+        transition: 1s ease-in;
+    }
+
+    /* Esta clase la asigno con js para traer el menu */
+    .navbar .menu .menu-on {
+        transform: translateX(100%);
+    }
+
+    .navbar .menu ul li {
+        margin: 30px;
+        text-transform: uppercase;
+    }
+
+    .container-info .social-content i {
+        display: none;
+    }
+
+    .container-info {
+        flex-wrap: wrap-reverse;
+    }
+
+    .container-info h1{
+        font-size: 2em;
+    }
+
+    .container-info h2{
+        font-size: 1em;
+    }
+
+    .container-info .btn {
+        font-size: 0.8em;
+    }
+
+    header .wave {
+        margin-top: 320px;
+    }
+}
+
+@keyframes left-move {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes right-move {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes up-move {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+
+
+
+
+
+
+
+/* Para que la barra de menu se coloque como columna en pantallas de hasta 600px 
+@media (min-width: 600px) {
+
+    .navbar .brand i{
+        margin-left: -30px;
+    }
+
+    .navbar .boton-menu i {
+        display: block;
+        margin: -60px 30px;
+    }
+
+    .navbar .menu ul {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-color: #3c1053;
+        position: fixed;
+        margin-top: 60px;
+        
+        /* Llevo el menu hacia la izq: 
+        transform: translateX(-120%);
+        transition: 1s ease-in;
+    }
+
+    /* Esta clase la asigno con js para traer el menu 
+    .navbar .menu .menu-on {
+        transform: translateX(-4%);
+    }
+
+    .navbar .menu ul li {
+        margin: 30px;
+        text-transform: uppercase;
+    }
+
+    .container-info .social-content i {
+        display: none;
+    }
+
+    .container-info {
+        flex-wrap: wrap-reverse;
+        margin-top: 100px;
+    }
+
+    .container-info h1{
+        font-size: 3.5em;
+    }
+
+    .container-info h2{
+        font-size: 1.5em;
+    }
+}
+
+
+/* Para que la barra de menu se coloque como columna en pantallas de hasta 570px 
+@media (min-width: 768px) {
+
+    .navbar .brand i{
+        margin-left: -30px;
+    }
+
+    .navbar .boton-menu i {
+        display: block;
+        margin: -60px 30px;
+    }
+
+    .navbar .menu ul {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-color: #3c1053;
+        position: fixed;
+        margin-top: 60px;
+        
+        /* Llevo el menu hacia la izq: 
+        transform: translateX(-120%);
+        transition: 1s ease-in;
+    }
+
+    /* Esta clase la asigno con js para traer el menu 
+    .navbar .menu .menu-on {
+        transform: translateX(-4%);
+    }
+
+    .navbar .menu ul li {
+        margin: 30px;
+        text-transform: uppercase;
+    }
+
+    .container-info .social-content i {
+        display: none;
+    }
+
+    .container-info {
+        flex-wrap: wrap-reverse;
+        margin-top: 100px;
+    }
+
+    .container-info h1{
+        font-size: 4em;
+    }
+
+    .container-info h2{
+        font-size: 2em;
+    }
+} */
