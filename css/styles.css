@@ -13,16 +13,6 @@
 }
 
 
-
-
-
-
-
-
-
-
-
-
 *{
     margin: 0;
     padding: 0;
@@ -45,7 +35,7 @@ header {
 
 .navbar {
     margin-top: 30px;
-
+    padding-bottom: 10px;
 }
 
 .navbar .brand {
@@ -105,6 +95,7 @@ header {
     justify-content: space-evenly;
     align-items: center;
     margin-top: 50px;
+    
 }
 
 .container-info h1 {
@@ -172,7 +163,7 @@ header {
 header .wave {
     margin-top: 150px;
 }
-
+/* ----------Inicio------------ */
 .exposiciones {
     background-color: white;
     height: 100%;
@@ -421,6 +412,105 @@ footer {
     background: wheat;
   }
   
+
+/*----------------- Historia ---------------------*/
+
+.contenido{
+    background-color: white;
+    padding: 2em;
+}
+
+.contenido .Historia {
+    animation: right-move 1s ease-in;
+    background-image: url(/Imagenes/Img-back.png);
+    background-position: relative;
+    background-size: cover;
+    color: transparent;
+    font-family: texto;
+    font-size: 1.5em;
+    font-optical-sizing: auto;
+    padding: 15px;
+}
+
+.contenido .Historia:hover{
+    background-image: none;
+    color: rgba(63,172,211,255);
+    font-family: texto;
+    /* font-size: 1.5em; */
+    font-optical-sizing: auto;
+    padding: 15px;
+    
+} 
+.contenido .Historia h1 {
+    color: rgba(1,128,181,255);
+    font-family: titulo;
+    /* font-size: 7vh; */
+    padding: 15px;
+    opacity: 100;
+}
+/* .contenido .Historia h5 {
+    color: rgba(63,172,211,255);
+    font-family: texto;
+    font-size: 1.5em;
+    font-optical-sizing: auto;
+    padding: 15px;
+    opacity: 0;
+}
+.contenido .Historia h5:hover {
+    color: rgba(63,172,211,255);
+    font-family: texto;
+    font-size: 1.5em;
+    font-optical-sizing: auto;
+    padding: 15px;
+    opacity: 100;
+}   */
+.contenido .Actual {
+    animation: left-move 1s ease-in;
+    background-image: url(/Imagenes/Img-back2.jfif);
+    background-position: relative;
+    background-size: cover;
+    color: transparent;
+    font-family: texto;
+    font-size: 1.5em;
+    font-optical-sizing: auto;
+    padding: 15px;
+    margin-top: 20px;
+}
+.contenido .Actual:hover{
+    background-image: none;
+    color: rgba(225,166,214,255);
+    font-family: texto;
+    /* font-size: 1.5em; */
+    font-optical-sizing: auto;
+    padding: 15px; 
+} 
+.contenido .Actual h1 {
+    color: rgba(225,166,214,255);
+    font-family: titulo;
+   
+    padding: 15px;
+    opacity: 100;
+}
+
+/* .contenido .Actual h5 {
+    color: rgba(225,166,214,255);
+    font-family: texto;
+    font-size: 1.5em;
+    font-optical-sizing: auto;
+    /* background-color:rgba(1,128,181,255); */
+    /* padding: 15px; */ */
+
+
+.contenido .Actual h5 a {
+    color: transparent;
+    font-family: texto;
+    font-size: 0%;
+    font-optical-sizing: auto;
+    opacity: 0;
+}
+.contenido .Actual a:hover {
+    color: rgba(254,209,188,255);
+} 
 
 /*---------------- Contacto -------------------*/
 
