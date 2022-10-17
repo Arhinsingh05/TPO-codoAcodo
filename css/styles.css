@@ -1,6 +1,27 @@
 /* Uso un google font de 2 tipografías y lo importo aquí */
 
 @import url();
+/*Index*/
+
+@font-face {
+    font-family: titulo;
+    src: url(/LibreBaskerville-Regular.ttf);
+}
+@font-face {
+    font-family: texto;
+    src: url(/TitilliumWeb-Regular.ttf);
+}
+
+
+
+
+
+
+
+
+
+
+
 
 *{
     margin: 0;
@@ -9,8 +30,8 @@
 }
 
 body {
-    font-family: 'Montserrat', sans-serif; 
-    background-color: hsl(37, 13%, 19%);
+    font-family: titulo; 
+    background-color: rgba(1,128,181,255);
 }
 
 header {
@@ -30,7 +51,7 @@ header {
 .navbar .brand {
     display: flex;
     margin: 20px 70px;
-    color: wheat;
+    color: rgba(225,166,214,255);
 }
 
 .navbar .brand i {
@@ -56,13 +77,13 @@ header {
 }
 
 .menu ul li a{
-    color: white;
+    color: rgba(254,209,188,255);
     text-decoration: none;
     font-size: 1.3em;
 }
 
 .menu ul li a:hover {
-    color: wheat;
+    color: rgba(225,166,214,255);
 }
 
 .navbar .boton-menu {
@@ -75,6 +96,7 @@ header {
     font-size: 1.8em;
     cursor: pointer;
     color: white;
+    
     display: none;  /*Oculto en pantalla grande, solo aparece en pantalla chica */
 }
 
@@ -82,19 +104,21 @@ header {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    color: white;
-    font-family: 'Permanent Marker', cursive;
     margin-top: 50px;
 }
 
 .container-info h1 {
     font-size: 5em;
     animation: left-move 1s ease-in;
+    color: rgba(225,166,214,255);
+    font-family: titulo;
 }
 
 .container-info h2 {
-    font-size: 2em;
+    font-size: 3em;
     animation: right-move 1s ease-in;
+    color: rgba(173,208,202,255);
+    font-family: texto;
 }
 
 .container-info .btn {
@@ -103,12 +127,24 @@ header {
     width: 200px;
     padding: 5px;
     border-radius: 50px;
-    background-color: wheat;
+    background-color: rgba(254,209,188,255);
     border: none;
-    color: white;
+    color: rgba(63,172,211,255);
     animation: right-move 1s ease-in;
+    font-family: texto;
 }
-
+.container-info .btn:hover {
+    font-size: 1.5em;
+    margin-top: 15px;
+    width: 200px;
+    padding: 5px;
+    border-radius: 50px;
+    background-color:rgba(254,209,188,255);
+    border: none;
+    color: rgba(1,128,181,255);
+    font-family: texto;
+    
+}
 .container-info .img-content img {
     max-width: 100%;
     animation: up-move 1s ease-in;
@@ -125,7 +161,7 @@ header {
 
 .container-info .social-content i{
     font-size: 1.3em;
-    color: wheat;
+    color: rgba(254,209,188,255);
     animation: left-move 1s ease-in;
 }
 
@@ -138,20 +174,184 @@ header .wave {
 }
 
 .exposiciones {
-    background-color: #ffff;
-    height: 100vh;
+    background-color: white;
+    height: 100%;
+    padding-left: 6%;
+    padding-right: 6%;
+    
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    gap: 0.25em;  
+      
+}
+.exposiciones .Imagen {
+    max-height: 100%;
+    width:auto;
+    max-width: 45vw;
+    grid-column: 2;
+    grid-row:1;
+    animation: left-move 1s ease-in;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+   
+    border-radius: 50px;
+}
+.exposiciones .Imagen3 {
+    height: fit-content;
+    width:auto;
+    max-width: 45vw;
+    grid-column: 2;
+    /* grid-row: 3; */
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    animation: left-move 1s ease-in;
+    border-radius: 50px;
 }
 
+.exposiciones .Imagen2 {
+    height: fit-content;
+    width:auto;
+    max-width: 45vw;
+    grid-column: 1;
+    grid-row:2;
+    animation: left-move 1s ease-in;
+    display: flex;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    border-radius: 50px;
+}
 
+.exposiciones .Texto2 {
+    
+    grid-column: 2;
+    grid-row:2;
+    display:flex
+}
+.exposiciones .Texto h1{
+    font-family: titulo;
+    grid-column: 1;
+    grid-row:1; 
+    justify-content: left;
+    display: flex;
+    color: rgba(63,172,211,255);
+    font-size: 2em;
+}
+.exposiciones .Texto h5{
+    font-family: texto;
+    grid-column: 1;
+    grid-row:1; 
+    justify-content: left;
+    font-size: 1.3em;
+    display: flex;
+    color: rgba(173,208,202,255);
+}
+.exposiciones .Texto2 h1{
+    font-family: titulo;
+    grid-column: 2;
+    grid-row: 2;
+    justify-content: right;
+    display:flex;
+    font-size: 2em;
+    color: rgba(254,209,188,255);  
+}
+.exposiciones .Texto2 h5{
+    font-family: texto;
+    grid-column: 2;
+    grid-row:2;
+    justify-content: right;
+   color: rgba(254,209,188,255);
+    font-size: 1.3em;
+    padding-top: 6%;
+    display: flexbox;
+}
+
+.exposiciones .Texto3 h1{
+    font-family: titulo;
+    grid-column: 1;
+    grid-row:3; 
+    justify-content: left;
+    font-size: 2em;
+    display: flex;
+    color: rgba(1,128,181,255);
+}
+.exposiciones .Texto3 h5{
+    font-family: texto;
+    grid-column: 1;
+    grid-row:3; 
+    justify-content: left;
+    font-size: 1.3em;
+    display: flex;
+    color: rgba(173,208,202,255);
+}
+.bottom{
+    margin-top: 2vh;
+    padding: 1.5vw;
+    margin-bottom: 2vh;
+    background-color: rgba(173,208,202,255);
+    grid-column: 1/3;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    
+}
+.bottom h5{
+    justify-self: center;
+    font-family: texto;
+    font-size-adjust: inherit;
+    font-size: 1.2em;
+    display: inline-flex;
+    color: black;
+    
+}
+.bottom .btn {
+    font-size: medium;
+    margin-top: 15px;
+    width: 15em;
+    padding: 1.5vw;
+    border-radius: 50px;
+    background-color: rgba(254,209,188,255);
+    border: none;
+    color: rgba(63,172,211,255);
+    animation: right-move 1s ease-in;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    flex-direction: column;
+    text-decoration: none;
+    text-decoration: underline;
+}
+.bottom .btn:hover {
+    font-size: medium;
+    margin-top: 15px;
+    width: 15em;
+    padding: 1.5vw;
+    border-radius: 50px;
+    background-color: rgba(225,166,214,255);
+    border: none;
+    color: rgba(1,128,181,255);
+    animation: right-move 1s ease-in;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    flex-direction: column;
+    text-decoration: none;
+    text-decoration: underline;
+}
 /*----------------- Footer ---------------------*/
 
 footer {
     width: 100%;
-    background: wheat;
-    margin-top: 200px;
-    padding: 10px 0;
+    background: rgba(254,209,188,255);
+    margin-top: 2vw;
+    padding-top: 2vw;
     font-family: sans-serif;
-    color:hsl(37, 13%, 19%);
+    color: rgba(1,128,181,255);
   }
   
   .footer {
@@ -164,29 +364,49 @@ footer {
   
   .contact {
     width: 40%;
-    text-align: center;
+    text-align: end;
+    display: inline-flex;
+    
   }
-  
+  .contact i:hover {
+    transform: scale(1.5)
+  }
   .brand{
     font-weight: 600;
     font-size: 25px;
-    margin-left: 10px;
+    
+    display: inline-flex;
   }
-  
+  .footer .brand i:hover {
+    transform: scale(1.5)
+}
 
   .footer a {
     display:flex;
     text-decoration: none;
-    color:hsl(37, 13%, 19%);
+    color:rgba(63,172,211,255);
     transition: color .3s ease-in-out;
-    margin-bottom: 20px;
+    margin-bottom: 3vw;
+    display: inline-flex;
+    justify-content: center;
   }
-  
-.footer .social-content i{
+  .footer a:hover{
+    display:flex;
+    text-decoration: none;
+    color:rgba(1,128,181,255);
+    margin-bottom: 3vw;
+    display: inline-flex;
+    justify-content: center;
+  }
+.footer .social-content li{
     font-size: 1.3em;
     color: rgb(61, 53, 39);
     animation: left-move 1s ease-in;
     cursor: pointer;
+    display: inline-flex;
+    justify-items: center;
+    padding-left: 11%;
+
 }
 
 .footer .social-content i:hover {
@@ -197,7 +417,7 @@ footer {
     height: 2px;
     max-width: 1200px;
     margin: auto;
-    text-align: center;
+    text-align: inline;
     background: wheat;
   }
   
@@ -206,12 +426,14 @@ footer {
 
 .main-contacto {
     display: flex;
+    align-content: flex-end;
     overflow: auto;
     margin-bottom: 30px;
+    background-color: bisque;
   }
   
   .ubicacion { 
-    float: right; 
+    float: center; 
     margin: 90px 10px 10px 40px;
   }
   
@@ -224,7 +446,7 @@ footer {
   }
   
   .contacto {
-    float: right;
+    float: center;
     margin: 50px 20px;
   } 
   
