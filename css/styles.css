@@ -1,7 +1,8 @@
-/* Uso un google font de 2 tipografías y lo importo aquí */
+@import url(https://use.typekit.net/cxb7wbu.css);
+@import url(https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap);
 
-@import url();
-/*Index*/
+
+/* ---------------------------- Index -------------------------------*/
 
 @font-face {
     font-family: titulo;
@@ -16,6 +17,11 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
     box-sizing: border-box;
 }
 
@@ -45,7 +51,8 @@ header {
 }
 
 .navbar .brand i {
-    font-size: 1.6em;
+    font-size: 1.4em;
+    margin-top: 0.35rem;
 }
 
 .navbar .brand h3 {
@@ -106,23 +113,25 @@ header {
 }
 
 .container-info h2 {
-    font-size: 3em;
+    font-size: 2em;
     animation: right-move 1s ease-in;
     color: rgba(173,208,202,255);
     font-family: texto;
 }
 
 .container-info .btn {
-    font-size: 1.5em;
+    font-size: 1.2em;
     margin-top: 15px;
     width: 200px;
     padding: 5px;
     border-radius: 50px;
     background-color: rgba(254,209,188,255);
     border: none;
-    color: rgba(63,172,211,255);
+    color: rgba(1,128,181,255);
+    text-decoration: none;
     animation: right-move 1s ease-in;
     font-family: texto;
+    font-weight: bold;
 }
 .container-info .btn:hover {
     font-size: 1.5em;
@@ -134,6 +143,7 @@ header {
     border: none;
     color: rgba(1,128,181,255);
     font-family: texto;
+    font-weight: bold;
     
 }
 .container-info .img-content img {
@@ -511,6 +521,74 @@ footer {
 .contenido .Actual a:hover {
     color: rgba(254,209,188,255);
 } 
+
+
+/* ------------------ Tienda ------------------ */
+
+.products {
+    background-color: bisque;
+    padding: 2em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
+    gap: 10rem;
+    padding: 5rem;
+    justify-content: space-between;
+}
+
+.products a {
+    text-decoration: none;
+}
+
+.product-item {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    background-color: white;  
+    width: 21vw;
+    height: 59vh; 
+
+}
+
+.image-container img{
+    border: groove;
+    width: 21vw;
+    height: 59vh;
+}
+
+
+.product-description {
+    margin-top: 0.5rem;
+    color: black;
+    font-size: 0.8em;
+}
+
+
+.product-price {
+    font-weight: bold;
+    color:blue;
+    margin-top: 0.5rem;
+}
+
+.product-price:hover {
+    color: black;
+    text-decoration: none;
+
+}
+
+.product-image:hover {
+    text-decoration: none !important;
+    color: rgba(225,166,214,255);
+    box-sizing: border-box;
+    position: relative;
+    vertical-align: middle;
+    transition: background-color .5s ease-out;
+                border-radius: 2s ease-in;
+}
 
 /*---------------- Contacto -------------------*/
 
