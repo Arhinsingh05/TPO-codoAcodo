@@ -24,8 +24,8 @@ window.addEventListener("scroll", function(){
 
 /* Transición: cambio de color */
 function cambiar_color (div) {
-	div.style.background = 'rgb(25, 43, 121)';
-    div.style.border = 'white 1.5px dotted';
+	div.style.background = rgb(25, 43, 121);
+    div.style.border = dotted;
 }
 
 function volver_color (div) {
