@@ -102,7 +102,7 @@ header {
     justify-content: space-evenly;
     align-items: center;
     margin-top: 50px;
-    
+    padding-left: 3vw;
 }
 
 .container-info h1 {
@@ -139,7 +139,7 @@ header {
     width: 200px;
     padding: 5px;
     border-radius: 50px;
-    background-color:rgba(254,209,188,255);
+    background-color:rgba(225,166,214,255);
     border: none;
     color: rgba(1,128,181,255);
     font-family: texto;
@@ -179,13 +179,10 @@ header .wave {
     height: 100%;
     padding-left: 6%;
     padding-right: 6%;
-    
     max-width: 100%;
     display: grid;
     grid-template-columns: auto auto;
-    grid-template-rows: auto auto auto;
-    gap: 0.25em;  
-      
+    grid-template-rows: auto auto auto;      
 }
 .exposiciones .Imagen {
     max-height: 100%;
@@ -197,7 +194,6 @@ header .wave {
     display: flex;
     align-self: center;
     justify-self: center;
-   
     border-radius: 50px;
 }
 .exposiciones .Imagen3 {
@@ -205,7 +201,6 @@ header .wave {
     width:auto;
     max-width: 45vw;
     grid-column: 2;
-    /* grid-row: 3; */
     display: flex;
     align-self: center;
     justify-self: center;
@@ -225,6 +220,7 @@ header .wave {
     align-self: center;
     justify-self: center;
     border-radius: 50px;
+    background-color: rgba(1,128,181,255);
 }
 
 .exposiciones .Texto2 {
@@ -258,14 +254,14 @@ header .wave {
     justify-content: right;
     display:flex;
     font-size: 2em;
-    color: rgba(254,209,188,255);  
+    color: rgba(1,128,181,255);  
 }
 .exposiciones .Texto2 h5{
     font-family: texto;
     grid-column: 2;
     grid-row:2;
     justify-content: right;
-   color: rgba(254,209,188,255);
+    color: rgba(1,128,181,255);
     font-size: 1.3em;
     padding-top: 6%;
     display: flexbox;
@@ -439,9 +435,8 @@ footer {
     font-family: texto;
     font-size: 1.5em;
     font-optical-sizing: auto;
-    padding: 15px;
+    padding: 15px;   
 }
-
 .contenido .Historia:hover{
     background-image: none;
     color: rgba(63,172,211,255);
@@ -449,7 +444,6 @@ footer {
     /* font-size: 1.5em; */
     font-optical-sizing: auto;
     padding: 15px;
-    
 } 
 .contenido .Historia h1 {
     color: rgba(1,128,181,255);
@@ -458,22 +452,7 @@ footer {
     padding: 15px;
     opacity: 100;
 }
-/* .contenido .Historia h5 {
-    color: rgba(63,172,211,255);
-    font-family: texto;
-    font-size: 1.5em;
-    font-optical-sizing: auto;
-    padding: 15px;
-    opacity: 0;
-}
-.contenido .Historia h5:hover {
-    color: rgba(63,172,211,255);
-    font-family: texto;
-    font-size: 1.5em;
-    font-optical-sizing: auto;
-    padding: 15px;
-    opacity: 100;
-}   */
+
 .contenido .Actual {
     animation: left-move 1s ease-in;
     background-image: url(/Imagenes/Img-back2.jfif);
@@ -492,7 +471,8 @@ footer {
     font-family: texto;
     /* font-size: 1.5em; */
     font-optical-sizing: auto;
-    padding: 15px; 
+    padding: 15px;
+    background-color: rgba(1,128,181,255); 
 } 
 .contenido .Actual h1 {
     color: rgba(225,166,214,255);
@@ -501,15 +481,6 @@ footer {
     padding: 15px;
     opacity: 100;
 }
-
-/* .contenido .Actual h5 {
-    color: rgba(225,166,214,255);
-    font-family: texto;
-    font-size: 1.5em;
-    font-optical-sizing: auto;
-    /* background-color:rgba(1,128,181,255); */
-    /* padding: 15px; */ */
-
 
 .contenido .Actual h5 a {
     color: transparent;
@@ -521,7 +492,99 @@ footer {
 .contenido .Actual a:hover {
     color: rgba(254,209,188,255);
 } 
-
+/*---------------- Exposiciones -------------------*/
+.slide {
+    position: relative;
+    
+    padding-top: 4vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-bottom: 4vw;
+    background-color: white;
+}
+.slide-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 40vw;
+}
+.slide-open:checked + .slide-item {
+    position: static;
+    opacity: 100;
+}
+.slide-item {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.6s ease-out;
+    background-color: rgba(173,208,202,255);
+}
+.slide-item img {
+    display: block;
+    height: 40vw;
+    max-width: 100%;
+}
+.slide-control {
+    background: rgba(63,172,211,255);
+    border-radius: 50%;
+    color: rgba(225,166,214,255);
+    cursor: pointer;
+    
+    display: none;
+    font-size: 4vw;
+    height: 4vw;
+    line-height: 3.5vw;
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    text-align: center;
+    width: 4vw;
+    
+}
+.slide-control.prev {
+    left: 2%;
+}
+.slide-control.next {
+    right: 2%;
+}
+.slide-control:hover {
+    background: rgba(1,128,181,255);
+    color: rgba(254,209,188,255);
+}
+#slide-1:checked ~ .control-1,
+#slide-2:checked ~ .control-2,
+#slide-3:checked ~ .control-3 {
+    display: block;
+}
+.slide-indicador {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+.slide-indicador li {
+    display: inline-block;
+    margin: 0 5px;
+}
+.slide-circulo {
+    color: rgba(254,209,188,255);
+    cursor: pointer;
+    display: block;
+    font-size: 5vw;
+}
+.slide-circulo:hover {
+    color: rgba(225,166,214,255);
+}
+#slide-1:checked ~ .control-1 ~ .slide-indicador 
+     li:nth-child(1) .slide-circulo,
+#slide-2:checked ~ .control-2 ~ .slide-indicador 
+      li:nth-child(2) .slide-circulo,
+#slide-3:checked ~ .control-3 ~ .slide-indicador 
+      li:nth-child(3) .slide-circulo {
+    color: rgba(1, 128, 181, 255);
+}
 
 /* ------------------ Tienda ------------------ */
 
@@ -588,6 +651,25 @@ footer {
     vertical-align: middle;
     transition: background-color .5s ease-out;
                 border-radius: 2s ease-in;
+}
+
+.slide-titulo{
+    color: rgba(254,209,188,255);
+    font-size: 4vw;
+    position: absolute;
+    top: 80%;
+    left: 2%;
+    -webkit-text-stroke: 0.2vw rgba(1,128,181,255);
+    font-family: titulo;
+}    
+.slide-text{
+    color: rgba(1,128,181,255);
+    font-size: 2.5vw;
+    position: absolute;
+    top: 4%;
+    padding-left: 45%;
+    padding-right: 10%;
+    font-family: texto;
 }
 
 /*---------------- Contacto -------------------*/
@@ -717,6 +799,7 @@ footer {
 
     .container-info {
         flex-wrap: wrap-reverse;
+        
     }
 
     .container-info h1{
