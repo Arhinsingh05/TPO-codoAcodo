@@ -210,19 +210,6 @@
 
 
 
-@media (max-width: 400px) {
-    .products {
-        padding: .5rem;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
-}
-
-@media (max-width: 300px) {
-    .products {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        padding: 0;
-    }
-}
 
 /* contact */
 
@@ -247,13 +234,6 @@
     margin: auto;
 }
 
-@media (max-width: 600px) {
-    .form {
-        width: 75%;
-        padding: 2rem 0;
-    }
-}
-
 .contact-input {
     display: block;
     width: 100%;
@@ -263,62 +243,4 @@
     -webkit-box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.35);
     -moz-box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.35);
     box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.35);
-}
-
-.submit {
-    display: block;
-    margin: 1.5rem auto;
-    padding: .6rem;
-    background: var(--clr-green);
-    border: none;
-    -webkit-box-shadow: var(--bs-green);
-    -moz-box-shadow: var(--bs-green);
-    box-shadow: var(--bs-green);
-    cursor: pointer;
-    transition: .3s;}
-
-.submit:hover {
-    background: var(--clr-accent);
-    -webkit-box-shadow: var(--bs-accent);
-    -moz-box-shadow: var(--bs-accent);
-    box-shadow: var(--bs-accent);
-}
-
-/* Sucursales */
-
-.sucursales {
-    padding: 1rem;
-}
-
-.sucursales h2 {
-    text-align: center;
-    margin: 1rem;
-    font-size: var(--fs-h2);
-}
-
-.sucursales-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 2rem;
-}
-
-.sucursal-title {
-    font-size: var(--fs-h3);
-    text-align: center;
-    margin: 1rem;
-    color: var(--clr-light);
-    background: var(--clr-dark);
-    box-shadow: var(--bs-gray);
-}
-
-@media (max-width: 900px) {
-    .sucursales-container {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        margin-bottom: 2rem;
-
-        flex-direction: column;
-    }
 }

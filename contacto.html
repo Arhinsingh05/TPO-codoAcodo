@@ -35,31 +35,93 @@
                                 <li><a href="/historia.html">Museo</a></li> 
                                 <li><a href="/exposiciones.html">Exposiciones</a></li> 
                                 <li><a href="/tienda.html">Tienda</a></li> 
-                            <li><a href="/contacto.html">Contacto</a></li> <!-- Contactar al museo y también podría tener un botón de suscribirse para recibir un Newsletter -->
+                            <li><a href="/contacto.html">Contacto</a></li> 
                         </ul>
                     </div>
                 </nav>
             </header>
 
-            <main class="main-contacto"> 
-                    <form class="contacto" name='contacto' action="#.html">
-                    <h1>CONTACTO</h1>
-                    <input type="text" name="nombre" class="nombre" placeholder="Ingrese su nombre" autofocus required/>
-                    <br/><br/>
-                    <input type="text" maxlength="100" name="apellido" class="apellido" placeholder="Ingrese su apellido" required/>
-                    <br/><br/>
-                    <input type="email" name="email" class="email" placeholder="Ingrese su dirección de email" required/>
-                    <br/><br/>
-                    <select name="asunto" class="asunto">
-                        <option value="Soy artista">Soy artista</option>
-                        <option value="Soy docente">Soy docente / Represento una institución educativa</option>
-                        <option value="Consulta">Consulta o sugerencia</option>
-                    </select>
-                    <br/><br/>
-                    <textarea name="mensaje" class="mensaje" cols="60" row="20" placeholder="Escriba su mensaje aquí..." required></textarea>
-                    <br/><br/>
-                    <input type="submit" class="boton_enviar" value="Enviar" onclick="validacion_al_enviar_datos()"/> 
-                </form>
+            <main> 
+                <section class="main-contacto" id="contacto">   
+                    <form class="contacto" name='contacto'>
+                        <h1>CONTACTO:</h1>
+                        <input type="text" name="nombre" class="nombre" placeholder="Ingrese su nombre" autofocus required/>
+                        <br/><br/>
+                        <input type="text" maxlength="100" name="apellido" class="apellido" placeholder="Ingrese su apellido" required/>
+                        <br/><br/>
+                        <input type="email" name="email" class="email" placeholder="Ingrese su dirección de email" required/>
+                        <br/><br/>
+                        <select name="asunto" class="asunto">
+                            <option value="Soy artista">Soy artista</option>
+                            <option value="Soy docente">Soy docente / Represento una institución educativa</option>
+                            <option value="Consulta">Consulta o sugerencia</option>
+                        </select>
+                        <br/><br/>
+                        <textarea name="mensaje" class="mensaje" cols="60" row="20" placeholder="Escriba su mensaje aquí..." required></textarea>
+                        <br/><br/>
+                        <input type="submit" class="boton_enviar" value="Enviar" onclick="validacion_al_enviar_datos()"/> 
+                    </form>
+                    
+                    <div class="sucursales-container">
+                        <h2>SUCURSALES:</h2>
+                        <div class="sucursal">
+                            <h3 class="sucursal-title">Buenos Aires, Argentina</h3>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.0289393118774!2d-58.44985308519426!3d-34.62870896632695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x14d10f3077a78e6!2zMzTCsDM3JzQzLjQiUyA1OMKwMjYnNTEuNiJX!5e0!3m2!1ses-419!2sar!4v1666831981166!5m2!1ses-419!2sar"
+                                width="200"
+                                height="200"
+                                frameborder="0"
+                                style="border: 0"
+                                allowfullscreen
+                                aria-hidden="false"
+                                tabindex="0"
+                            ></iframe>
+                        </div>
+                        <div class="sucursal">
+                            <h3 class="sucursal-title">Nueva York, Estados Unidos</h3>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3025.9341680790617!2d-73.93910578522846!3d40.67541944779082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x396bae2ed1067659!2zNDDCsDQwJzMxLjUiTiA3M8KwNTYnMTIuOSJX!5e0!3m2!1ses-419!2sar!4v1666832462844!5m2!1ses-419!2sar"
+                                width="200"
+                                height="200"
+                                frameborder="0"
+                                style="border: 0"
+                                allowfullscreen=""
+                                aria-hidden="false"
+                                tabindex="0"
+                            ></iframe>
+                        </div>
+                        <div class="sucursal">
+                            <h3 class="sucursal-title">París, Francia</h3>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2620.4170715393025!2d2.3620440150910413!3d48.94554380252114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9778cc9a960a3280!2zNDjCsDU2JzQ0LjAiTiAywrAyMSc1MS4yIkU!5e0!3m2!1ses-419!2sar!4v1666831804666!5m2!1ses-419!2sar"
+                                width="200"
+                                height="200"
+                                frameborder="0"
+                                style="border: 0"
+                                allowfullscreen=""
+                                aria-hidden="false"
+                                tabindex="0"
+                            ></iframe>
+                        </div>
+                        <div class="sucursal">
+                            <h3 class="sucursal-title">Auckland, Nueva Zelanda</h3>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d798.2401439816398!2d174.75576452918514!3d-36.843420225490526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb55364bffe2907e2!2zMzbCsDUwJzM2LjMiUyAxNzTCsDQ1JzIyLjciRQ!5e0!3m2!1ses-419!2sar!4v1666832295617!5m2!1ses-419!2sar"
+                                width="200"
+                                height="200"
+                                frameborder="0"
+                                style="border: 0"
+                                allowfullscreen
+                                aria-hidden="false"
+                                tabindex="0"
+                            ></iframe>
+                        </div>
+
+                    
+                    </div>
+
+
+                </section>
             </main>
             
             <!-- Pie de página -->

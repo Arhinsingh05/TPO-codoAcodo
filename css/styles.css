@@ -173,7 +173,7 @@ header {
 header .wave {
     margin-top: 150px;
 }
-/* ----------Inicio------------ */
+/* ---------------------------  Inicio  ----------------------------- */
 .exposiciones {
     background-color: white;
     height: 100%;
@@ -304,43 +304,46 @@ header .wave {
     font-size: 1.2em;
     display: inline-flex;
     color: black;
-    
 }
+
 .bottom .btn {
-    font-size: medium;
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: texto;
     margin-top: 15px;
     width: 15em;
-    padding: 1.5vw;
+    padding: 1vw;
     border-radius: 50px;
     background-color: rgba(254,209,188,255);
-    border: none;
-    color: rgba(63,172,211,255);
+    color: rgba(1,128,181,255);
     animation: right-move 1s ease-in;
     display: flex;
-    justify-self: center;
     align-items: center;
     flex-direction: column;
     text-decoration: none;
     text-decoration: underline;
 }
+
+
 .bottom .btn:hover {
-    font-size: medium;
+    font-size: 1.2em;
+    font-family: texto;
+    font-weight: bold;
     margin-top: 15px;
     width: 15em;
     padding: 1.5vw;
     border-radius: 50px;
     background-color: rgba(225,166,214,255);
-    border: none;
     color: rgba(1,128,181,255);
     animation: right-move 1s ease-in;
     display: flex;
-    justify-self: center;
-    align-items: center;
     flex-direction: column;
     text-decoration: none;
     text-decoration: underline;
 }
-/*----------------- Footer ---------------------*/
+
+
+/*---------------------------------- Footer --------------------------------------*/
 
 footer {
     width: 100%;
@@ -386,7 +389,9 @@ footer {
     margin-bottom: 3vw;
     display: inline-flex;
     justify-content: center;
+    padding: 0 0.3em 0.3em 0;
   }
+
   .footer a:hover{
     display:flex;
     text-decoration: none;
@@ -402,7 +407,7 @@ footer {
     cursor: pointer;
     display: inline-flex;
     justify-items: center;
-    padding-left: 11%;
+    padding: 0 1.5em 1em 0;
 
 }
 
@@ -412,14 +417,14 @@ footer {
   
   .line {
     height: 2px;
-    max-width: 1200px;
+    max-width: 2000px;
     margin: auto;
     text-align: inline;
     background: wheat;
   }
   
 
-/*----------------- Historia ---------------------*/
+/*---------------------------------- Historia --------------------------------------*/
 
 .contenido{
     background-color: white;
@@ -492,7 +497,8 @@ footer {
 .contenido .Actual a:hover {
     color: rgba(254,209,188,255);
 } 
-/*---------------- Exposiciones -------------------*/
+/*--------------------------------- Exposiciones ------------------------------------*/
+
 .slide {
     position: relative;
     
@@ -586,7 +592,26 @@ footer {
     color: rgba(1, 128, 181, 255);
 }
 
-/* ------------------ Tienda ------------------ */
+.slide-titulo{
+    color: rgba(254,209,188,255);
+    font-size: 4vw;
+    position: absolute;
+    top: 80%;
+    left: 2%;
+    -webkit-text-stroke: 0.2vw rgba(1,128,181,255);
+    font-family: titulo;
+}    
+.slide-text{
+    color: rgba(1,128,181,255);
+    font-size: 2.5vw;
+    position: absolute;
+    top: 4%;
+    padding-left: 45%;
+    padding-right: 10%;
+    font-family: texto;
+}
+
+/* ----------------------------------- Tienda ----------------------------------- */
 
 .products {
     background-color: bisque;
@@ -653,51 +678,27 @@ footer {
                 border-radius: 2s ease-in;
 }
 
-.slide-titulo{
-    color: rgba(254,209,188,255);
-    font-size: 4vw;
-    position: absolute;
-    top: 80%;
-    left: 2%;
-    -webkit-text-stroke: 0.2vw rgba(1,128,181,255);
-    font-family: titulo;
-}    
-.slide-text{
-    color: rgba(1,128,181,255);
-    font-size: 2.5vw;
-    position: absolute;
-    top: 4%;
-    padding-left: 45%;
-    padding-right: 10%;
-    font-family: texto;
-}
-
-/*---------------- Contacto -------------------*/
+/*--------------------------------- Contacto ------------------------------------*/
 
 .main-contacto {
     display: flex;
     align-content: flex-end;
     overflow: auto;
-    margin-bottom: 30px;
     background-color: bisque;
   }
   
-  .ubicacion { 
-    float: center; 
-    margin: 90px 10px 10px 40px;
-  }
   
-.titulo-contacto {
-    font-size: 2.5rem;
+.contacto h1 {
+    font-size: 1.5rem;
     color: rgb(21, 37, 107);
-    font-family: 'fuente', Arial, Helvetica, sans-serif;
+    font-family: titulo, Arial, Helvetica, sans-serif;
     text-align: center;
-    margin: 90px 15px 20px 10px;
+    margin: 0px 20px 50px;
   }
   
   .contacto {
     float: center;
-    margin: 50px 20px;
+    margin: 50px 20px 0px 50px;
   } 
   
   .nombre,.apellido,.email,.asunto,.mensaje {
@@ -720,6 +721,7 @@ footer {
   }
   
   .boton_enviar {
+    display: block;
     width: 100px;
     height: 35px;
     color: rgb(61, 53, 39);
@@ -728,32 +730,41 @@ footer {
     font-size: 1rem;
     border: rgb(253, 200, 101) 2px solid;
     margin-left: 150px;
+    cursor: pointer;
+    transition: .3s;
   }
   
   .boton_enviar:hover {
     border: white 1px solid;
     background-color: rgb(136, 121, 94);
   }
-  
-  /* Breakpoints responsive: contacto.html */
-  
-  @media screen and (max-width: 1265px) {
-    .main-contacto {
-      margin-bottom: -261px;
-    }
-  }
-  
-  @media screen and (max-width: 1280px) {
-    .mapa {
-      margin: 15px 100px 20px 80px;
-    }
-  }
-  @media screen and (max-width: 1110px) {
-    .header-pag {
-      padding-top: 0px;
-    }
-  }
-  
+
+
+/*--------------------------------- Sucursales ------------------------------------*/
+
+.sucursales-container h2 {
+    font-size: 1.5rem;
+    color: rgb(21, 37, 107);
+    font-family: titulo, Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 50px 50px 0px 0px;
+}
+
+
+.sucursal {
+    display: inline-block;
+    margin: 40px 20px 0px 0px;
+  } 
+
+
+.sucursal-title, iframe {
+    font-size: 1rem;
+    margin: 10px 0px 0px 150px;
+    color: rgb(21, 37, 107);
+    justify-content: space-between;
+
+}
+
 
 /* Para que la barra de menu se coloque como columna en pantallas de 600px para arriba */
 @media (max-width: 650px) {
@@ -854,124 +865,3 @@ footer {
         transform: translateY(0px);
     }
 }
-
-
-
-
-
-
-
-
-
-/* Para que la barra de menu se coloque como columna en pantallas de hasta 600px 
-@media (min-width: 600px) {
-
-    .navbar .brand i{
-        margin-left: -30px;
-    }
-
-    .navbar .boton-menu i {
-        display: block;
-        margin: -60px 30px;
-    }
-
-    .navbar .menu ul {
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        width: 100%;
-        height: 100%;
-        z-index: 1;
-        background-color: #3c1053;
-        position: fixed;
-        margin-top: 60px;
-        
-        /* Llevo el menu hacia la izq: 
-        transform: translateX(-120%);
-        transition: 1s ease-in;
-    }
-
-    /* Esta clase la asigno con js para traer el menu 
-    .navbar .menu .menu-on {
-        transform: translateX(-4%);
-    }
-
-    .navbar .menu ul li {
-        margin: 30px;
-        text-transform: uppercase;
-    }
-
-    .container-info .social-content i {
-        display: none;
-    }
-
-    .container-info {
-        flex-wrap: wrap-reverse;
-        margin-top: 100px;
-    }
-
-    .container-info h1{
-        font-size: 3.5em;
-    }
-
-    .container-info h2{
-        font-size: 1.5em;
-    }
-}
-
-
-/* Para que la barra de menu se coloque como columna en pantallas de hasta 570px 
-@media (min-width: 768px) {
-
-    .navbar .brand i{
-        margin-left: -30px;
-    }
-
-    .navbar .boton-menu i {
-        display: block;
-        margin: -60px 30px;
-    }
-
-    .navbar .menu ul {
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        width: 100%;
-        height: 100%;
-        z-index: 1;
-        background-color: #3c1053;
-        position: fixed;
-        margin-top: 60px;
-        
-        /* Llevo el menu hacia la izq: 
-        transform: translateX(-120%);
-        transition: 1s ease-in;
-    }
-
-    /* Esta clase la asigno con js para traer el menu 
-    .navbar .menu .menu-on {
-        transform: translateX(-4%);
-    }
-
-    .navbar .menu ul li {
-        margin: 30px;
-        text-transform: uppercase;
-    }
-
-    .container-info .social-content i {
-        display: none;
-    }
-
-    .container-info {
-        flex-wrap: wrap-reverse;
-        margin-top: 100px;
-    }
-
-    .container-info h1{
-        font-size: 4em;
-    }
-
-    .container-info h2{
-        font-size: 2em;
-    }
-} */
