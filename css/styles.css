@@ -173,7 +173,7 @@ header {
 header .wave {
     margin-top: 150px;
 }
-/* ---------------------------  Inicio  ----------------------------- */
+
 .exposiciones {
     background-color: white;
     height: 100%;
@@ -427,7 +427,7 @@ footer {
 /*---------------------------------- Historia --------------------------------------*/
 
 .contenido{
-    background-color: white;
+    background-color: beige;
     padding: 2em;
 }
 
@@ -506,7 +506,7 @@ footer {
     padding-left: 2vw;
     padding-right: 2vw;
     padding-bottom: 4vw;
-    background-color: white;
+    background-color: beige;
 }
 .slide-inner {
     position: relative;
@@ -614,7 +614,7 @@ footer {
 /* ----------------------------------- Tienda ----------------------------------- */
 
 .products {
-    background-color: bisque;
+    background-color: beige;
     padding: 2em;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
@@ -684,7 +684,7 @@ footer {
     display: flex;
     align-content: flex-end;
     overflow: auto;
-    background-color: bisque;
+    background-color: beige;
   }
   
   
@@ -703,20 +703,20 @@ footer {
   
   .nombre,.apellido,.email,.asunto,.mensaje {
     font-family: sans-serif;
-    width: 403px;
-    height: 35px;
+    width: 35vw;
+    height: 7vh;
     border: rgb(253, 200, 101) 2px solid;
   }
   
   .asunto {
-    width: 403px;
-    height: 35px;
+    width: 35vw;
+    height: 7vh;
     margin-bottom: 2px;
     color:#676d77;
   }
   
   .mensaje {
-    height: 100px;
+    height: 33vh;
     overflow: scroll;
   }
   
@@ -753,7 +753,7 @@ footer {
 
 .sucursal {
     display: inline-block;
-    margin: 40px 20px 0px 0px;
+    margin: 40px 20px 10px 0px;
   } 
 
 
