@@ -34,6 +34,9 @@ function volver_color (div) {
 }
 
 /* Formulario de contacto */
+
+import swal from 'sweetalert'
+
 function validacion_al_enviar_datos() {
 
     if (document.contacto.nombre.value.length == 0) {
@@ -64,4 +67,26 @@ function validacion_al_enviar_datos() {
     }
 }
 
+const $form = document.querySelector('#form')
+$form.addEventListener('submit', handleSubmit)
 
+async function handleSubmit(event) {
+  event.preventDefault()
+  const form = new FormData(this)
+  const response = await fetch(this.action, {
+    method: this.method,
+    body:form,
+    headers:{
+      'Accept': 'application/json'      }
+  })
+
+  if(response.ok){
+    this.reset()
+    swal({
+            title: "Mensaje enviado!",
+            text: "Gracias por contactarnos! Te responderemos lo más pronto posible.",
+            icon:"success",
+        })
+}
+
+} 
