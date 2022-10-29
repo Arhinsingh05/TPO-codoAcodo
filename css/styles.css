@@ -939,14 +939,14 @@ footer {
     display: flex;
     flex-direction: column;
     background-color: white;  
-    width: 21vw;
+    
     height: 59vh; 
 
 }
 
 .image-container img{
     border: groove;
-    width: 21vw;
+   
     height: 59vh;
 }
 
