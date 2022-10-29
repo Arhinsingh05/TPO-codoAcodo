@@ -41,13 +41,13 @@ header .contenedor {
 }
 
 .contenedor {
-    margin-top: 30px;
-    padding-bottom: 10px;
+    margin-top: 5vw;
+    padding-bottom: 1vw;
 }
 
 .contenedor .brand {
     display: flex;
-    margin: 20px 70px;
+    margin: 2vw 7vw;
     color: rgba(225,166,214,255);
 }
 
@@ -59,19 +59,19 @@ header .contenedor {
 
 .contenedor .brand h3 {
     font-size: 1.3em;
-    margin: 5px 5px;
+    margin: 1vw 1vw;
 }
 
 nav ul{
     display: flex;
     justify-content: center;
-    margin: 0px 20px;
+    margin: 0px 2vw;
 
 }
 
 nav ul li{
     list-style: none;
-    margin-right: 70px;
+    margin-right: 8vw;
 
 }
 
@@ -262,19 +262,19 @@ header div.contenedor nav {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 5vw;
     padding-left: 3vw;
 }
 
 .container-info h1 {
-    font-size: 5em;
+    font-size: 3em;
     animation: left-move 1s ease-in;
     color: rgba(225,166,214,255);
     font-family: titulo;
 }
 
 .container-info h2 {
-    font-size: 2em;
+    font-size: 1.8em;
     animation: right-move 1s ease-in;
     color: rgba(173,208,202,255);
     font-family: texto;
@@ -318,7 +318,7 @@ header div.contenedor nav {
 
 .container-info .social-content li {
     list-style: none;
-    margin: 20px;
+    margin: 2vw;
 }
 
 .container-info .social-content i{
@@ -355,7 +355,7 @@ header .wave {
     display: flex;
     align-self: center;
     justify-self: center;
-    border-radius: 50px;
+    border-radius: 4vw;
 }
 .exposiciones .Imagen3 {
     height: fit-content;
@@ -366,7 +366,7 @@ header .wave {
     align-self: center;
     justify-self: center;
     animation: left-move 1s ease-in;
-    border-radius: 50px;
+    border-radius: 4vw;
 }
 
 .exposiciones .Imagen2 {
@@ -380,7 +380,7 @@ header .wave {
     display: flex;
     align-self: center;
     justify-self: center;
-    border-radius: 50px;
+    border-radius: 4vw;
     background-color: rgba(1,128,181,255);
 }
 
@@ -615,7 +615,22 @@ footer {
     color: rgba(1,128,181,255);
     font-family: titulo;
     /* font-size: 7vh; */
-    padding: 15px;
+    text-align: left;
+    opacity: 100;
+}
+.contenido .Histroia h5{
+    text-align: justify;
+}
+.contenido .Historia video {
+    height: 50vw;
+    width: 50vw;
+    margin-left: 15vw;
+    opacity: 0;
+}
+.contenido .Historia:hover video {
+    height: 50vw;
+    width: 50vw;
+    margin-left: 15vw;
     opacity: 100;
 }
 
@@ -644,7 +659,7 @@ footer {
     color: rgba(225,166,214,255);
     font-family: titulo;
    
-    padding: 15px;
+    
     opacity: 100;
 }
 
@@ -679,6 +694,9 @@ footer {
         padding-left: 100px;
         margin: 0 0 50px;
     }
+    .Historia video {
+        display: none
+    }
 }
 
 @media (max-width: 768px) {
@@ -693,7 +711,7 @@ footer {
             width: 406px;
         }
     
-        .historia, .actual{
+        .Historia, .Actual{
             font-size: 30px;
             line-height: 29px;
             padding-top: 225px;
@@ -707,52 +725,82 @@ footer {
 
 /*--------------------------------- Exposiciones ------------------------------------*/
 
-.slide {
+.carrusel {
     position: relative;
-    
+
     padding-top: 4vw;
     padding-left: 2vw;
     padding-right: 2vw;
     padding-bottom: 4vw;
-    background-color: beige;
+    background-color: white;
 }
-.slide-inner {
+.carrusel .titulos h1{
+    font-family: titulo;
+    color: rgba(1,128,181,255);
+    /* padding-bottom: 0.5vw; */
+    font-size: 3vw;
+}
+.carrusel .titulos hr{
+    margin-bottom: 1vw;
+    height: 0.5vw;
+    background-color: rgba(225,166,214,255);
+}
+.diapositivas {
     position: relative;
     overflow: hidden;
     width: 100%;
-    height: 40vw;
+    height: 30vw;
 }
-.slide-open:checked + .slide-item {
+.mostrar:checked + .diapositiva {
     position: static;
     opacity: 100;
 }
-.slide-item {
+.diapositiva {
     position: absolute;
     opacity: 0;
     transition: opacity 0.6s ease-out;
     background-color: rgba(173,208,202,255);
 }
-.slide-item img {
+.diapositiva img {
     display: block;
-    height: 40vw;
+    height: 30vw;
     max-width: 100%;
+}
+
+.diapo-titulo{
+    color: rgba(254,209,188,255);
+    font-size: 3.6vw;
+    position: absolute;
+    top: 80%;
+    left: 2%;
+    -webkit-text-stroke: 0.2vw rgba(1,128,181,255);
+    font-family: titulo;
+}
+.diapo-text{
+    color: rgba(1,128,181,255);
+    font-size: 2vw;
+    position: absolute;
+    top: 4%;
+    padding-left: 35%;
+    padding-right: 10%;
+    font-family: texto;
 }
 .slide-control {
     background: rgba(63,172,211,255);
     border-radius: 50%;
     color: rgba(225,166,214,255);
     cursor: pointer;
-    
+
     display: none;
-    font-size: 4vw;
-    height: 4vw;
+    font-size: 3.8vw;
+    height: 3.8vw;
     line-height: 3.5vw;
     position: absolute;
     top: 50%;
     cursor: pointer;
     text-align: center;
     width: 4vw;
-    
+
 }
 .slide-control.prev {
     left: 2%;
@@ -764,59 +812,105 @@ footer {
     background: rgba(1,128,181,255);
     color: rgba(254,209,188,255);
 }
-#slide-1:checked ~ .control-1,
-#slide-2:checked ~ .control-2,
-#slide-3:checked ~ .control-3 {
+#diapo-1:checked ~ .control-1,
+#diapo-2:checked ~ .control-2,
+#diapo-3:checked ~ .control-3 {
     display: block;
-}
-.slide-indicador {
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    bottom: 2%;
-    left: 0;
-    right: 0;
-    text-align: center;
-}
-.slide-indicador li {
-    display: inline-block;
-    margin: 0 5px;
-}
-.slide-circulo {
-    color: rgba(254,209,188,255);
-    cursor: pointer;
-    display: block;
-    font-size: 5vw;
-}
-.slide-circulo:hover {
-    color: rgba(225,166,214,255);
-}
-#slide-1:checked ~ .control-1 ~ .slide-indicador 
-     li:nth-child(1) .slide-circulo,
-#slide-2:checked ~ .control-2 ~ .slide-indicador 
-      li:nth-child(2) .slide-circulo,
-#slide-3:checked ~ .control-3 ~ .slide-indicador 
-      li:nth-child(3) .slide-circulo {
-    color: rgba(1, 128, 181, 255);
 }
 
-.slide-titulo{
+
+
+.Carrusel {
+    position: relative;
+    
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-bottom: 4vw;
+    background-color: white;
+}
+.Carrusel .Titulos h1{
+    font-family: titulo;
+    color: rgba(1,128,181,255);
+    /* padding-bottom: 0.5vw; */
+    font-size: 3vw;
+}
+.Carrusel .Titulos hr{
+    margin-bottom: 1vw;
+    height: 0.5vw;
+    background-color: rgba(225,166,214,255);
+}
+.Diapositivas {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 30vw;
+}
+.Mostrar:checked + .Diapositiva {
+    position: static;
+    opacity: 100;
+}
+.Diapositiva {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.6s ease-out;
+    background-color: rgba(173,208,202,255);
+}
+.Diapositiva img {
+    display: block;
+    height: 30vw;
+    max-width: 33%;
+}
+
+.Diapo-Titulo{
     color: rgba(254,209,188,255);
-    font-size: 4vw;
+    font-size: 3.6vw;
     position: absolute;
     top: 80%;
-    left: 2%;
+
+    padding-left: 35%;
     -webkit-text-stroke: 0.2vw rgba(1,128,181,255);
     font-family: titulo;
-}    
-.slide-text{
+}
+.Diapo-Text{
     color: rgba(1,128,181,255);
-    font-size: 2.5vw;
+    font-size: 2vw;
     position: absolute;
     top: 4%;
-    padding-left: 45%;
+    padding-left: 35%;
     padding-right: 10%;
     font-family: texto;
+}
+.Slide-Control {
+    background: rgba(63,172,211,255);
+    border-radius: 50%;
+    color: rgba(225,166,214,255);
+    cursor: pointer;
+
+    display: none;
+    font-size: 3.8vw;
+    height: 3.8vw;
+    line-height: 3.5vw;
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    text-align: center;
+    width: 4vw;
+
+}
+.Slide-Control.prev {
+    left: 2%;
+}
+.Slide-Control.next {
+    right: 2%;
+}
+.Slide-Control:hover {
+    background: rgba(1,128,181,255);
+    color: rgba(254,209,188,255);
+}
+#Diapo-1:checked ~ .Control-1,
+#Diapo-2:checked ~ .Control-2,
+#Diapo-3:checked ~ .Control-3 {
+    display: block;
 }
 
 /* ----------------------------------- Tienda ----------------------------------- */
@@ -892,13 +986,13 @@ footer {
     display: flex;
     align-content: flex-end;
     overflow: auto;
-    background-color: beige;
+    background-color: rgba(254,209,188,255);
   }
   
   
 .contacto h1 {
     font-size: 1.5rem;
-    color: rgb(21, 37, 107);
+    color: rgba(1,128,181,255);
     font-family: titulo, Arial, Helvetica, sans-serif;
     text-align: center;
     margin: 0px 20px 50px;
@@ -937,14 +1031,14 @@ footer {
     font-family: sans-serif;
     font-size: 1rem;
     border: rgb(253, 200, 101) 2px solid;
-    margin-left: 150px;
+    margin-left: 15vw;
     cursor: pointer;
     transition: .3s;
   }
   
   .boton_enviar:hover {
     border: white 1px solid;
-    background-color: rgb(136, 121, 94);
+    background-color: rgba(225,166,214,255);
   }
 
 
@@ -952,24 +1046,36 @@ footer {
 
 .sucursales-container h2 {
     font-size: 1.5rem;
-    color: rgb(21, 37, 107);
+    color: rgba(1,128,181,255);
     font-family: titulo, Arial, Helvetica, sans-serif;
     text-align: center;
-    margin: 50px 50px 0px 0px;
+    margin: 5vw 5vw 0px 0px;
 }
 
 
 .sucursal {
     display: inline-block;
-    margin: 40px 20px 10px 0px;
+    margin: 4vw 2vw 1vw 0px;
   } 
 
 
 .sucursal-title, iframe {
     font-size: 1rem;
-    margin: 10px 0px 0px 150px;
-    color: rgb(21, 37, 107);
+    margin: 1vw 0px 0px 15vw;
+    color: rgba(1,128,181,255);
     justify-content: space-between;
 
 }
 
+
+@media only screen and (max-width: 600px) {
+    .main-contacto {
+        display: grid;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .nombre,.apellido,.email,.asunto,.mensaje {
+        width: 60vw;
+    }
+}
