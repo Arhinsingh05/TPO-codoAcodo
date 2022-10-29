@@ -189,11 +189,9 @@ header div.contenedor nav {
 
 }
 
+@media (max-width: 700px) {
 
-/* Para que la barra de menu se coloque como columna en pantallas de 600px para arriba */
-@media (max-width: 650px) {
-
-    .navbar .brand i{
+    .contenedor .brand i{
         margin-left: -30px;
     }
 
@@ -258,14 +256,6 @@ header div.contenedor nav {
         transform: translateY(0px);
     }
 }
-
-
-
-
-
-
-
-
 
 
 .container-info {
@@ -668,6 +658,53 @@ footer {
 .contenido .Actual a:hover {
     color: rgba(254,209,188,255);
 } 
+
+
+/* ----------------------------- Responsive ---------------------------------*/
+
+@media (max-width: 600px) {
+
+    .contenedor .brand{
+        display: none;
+    }
+
+    .contenido {
+        width: 406px;
+    }
+
+    .historia, .actual{
+        font-size: 30px;
+        line-height: 29px;
+        padding-top: 225px;
+        padding-left: 100px;
+        margin: 0 0 50px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    @media (max-width: 600px) {
+
+        .contenedor .brand{
+            display: none;
+        }
+    
+        .contenido {
+            width: 406px;
+        }
+    
+        .historia, .actual{
+            font-size: 30px;
+            line-height: 29px;
+            padding-top: 225px;
+            padding-left: 100px;
+            margin: 0 0 50px;
+        }
+    }
+}
+
+
+
 /*--------------------------------- Exposiciones ------------------------------------*/
 
 .slide {
