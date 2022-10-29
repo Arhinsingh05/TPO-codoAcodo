@@ -622,14 +622,14 @@ footer {
     text-align: justify;
 }
 .contenido .Historia video {
-    height: 50vw;
-    width: 50vw;
+    height: 30vw;
+    width: 30vw;
     margin-left: 15vw;
     opacity: 0;
 }
 .contenido .Historia:hover video {
-    height: 50vw;
-    width: 50vw;
+    height: 30vw;
+    width: 30vw;
     margin-left: 15vw;
     opacity: 100;
 }
