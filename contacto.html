@@ -14,33 +14,31 @@
 
     <title>Contacto</title>
 </head>
-    <body>
-        <header role="banner">
-            <div class="main">
-                <nav class="navbar">
-                    <div class="brand">
-                        <!-- Icono o logo de fontawesome que representa al museo -->
-                        <i class="fa-brands fa-medium"></i>
-                            <!-- Menú hamburguesa  
-                            <input type="checkbox" id="check">
-                            <label for="check" class="boton-menu" id="boton-icon">
-                                <i class="fa-solid fa-bars" aria-hidden="true"></i>
-                            </label> -->
-                        <h3>Museo V.A.C.</h3>
-                    </div>
-                        <!-- Menú  -->
-                        <div class="menu">
-                            <ul id="menu" class="nav-menu">
-                                <li> <a href="/index.html">Inicio</a></li>
-                                <li><a href="/historia.html">Museo</a></li> 
-                                <li><a href="/exposiciones.html">Exposiciones</a></li> 
-                                <li><a href="/tienda.html">Tienda</a></li> 
-                            <li><a href="/contacto.html">Contacto</a></li> 
-                        </ul>
-                    </div>
-                </nav>
-            </header>
-
+<body>
+    <header>
+        <div class="contenedor">
+            <div class="brand">
+                <i class="fa-brands fa-medium"></i>
+                <h3>Museo V.A.C.</h3>
+            </div>
+                
+            <input type="checkbox" id="menu-check">
+            <label for="menu-check" id="menu">
+                <i class="fa-solid fa-bars" id="menu-abrir"></i>
+                <i class="fa-solid fa-xmark" id="menu-cerrar"></i>
+            </label> 
+                  
+            <nav>
+                <ul>
+                    <li> <a href="/index.html">Inicio</a></li>
+                    <li><a href="/historia.html">Museo</a></li> 
+                    <li><a href="/exposiciones.html">Exposiciones</a></li> 
+                    <li><a href="/tienda.html">Tienda</a></li> 
+                    <li><a href="/contacto.html">Contacto</a></li> 
+                </ul>
+            </nav>
+        </div>
+    </header>
             <main> 
                 <section class="main-contacto" id="contacto">   
                     <form id="form" class="contacto" name='contacto' action="https://formspree.io/f/xyyvnbjw" method="POST">

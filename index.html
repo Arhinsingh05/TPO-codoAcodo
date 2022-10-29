@@ -16,32 +16,30 @@
     <title>Museo V.A.C.</title>
 </head>
     <body>
-        <header role="banner">
-            <div class="main">
-                <nav class="navbar">
-                    <div class="brand">
-                        <!-- Icono o logo de fontawesome que representa al museo -->
-                        <i class="fa-brands fa-medium"></i>
-                            <!-- Menú hamburguesa  
-                            <input type="checkbox" id="check">
-                            <label for="check" class="boton-menu" id="boton-icon">
-                                <i class="fa-solid fa-bars" aria-hidden="true"></i>
-                            </label> -->
-                        <h3>Museo V.A.C.</h3>
-                    </div>
-      
-                        <!-- Menú  -->
-                        <div class="menu">
-                            <ul id="menu" class="nav-menu">
-                                <li> <a href="/index.html">Inicio</a></li>
-                                <li><a href="/historia.html">Museo</a></li> 
-                                <li><a href="/exposiciones.html">Exposiciones</a></li> 
-                                <li><a href="/tienda.html">Tienda</a></li> 
-                                <li><a href="/contacto.html">Contacto</a></li> 
-                            </ul>
-                        </div>
-                    </nav>
-                </header>
+        <header>
+            <div class="contenedor">
+                <div class="brand">
+                    <i class="fa-brands fa-medium"></i>
+                    <h3>Museo V.A.C.</h3>
+                </div>
+                    
+                <input type="checkbox" id="menu-check">
+                <label for="menu-check" id="menu">
+                    <i class="fa-solid fa-bars" id="menu-abrir"></i>
+                    <i class="fa-solid fa-xmark" id="menu-cerrar"></i>
+                </label> 
+                      
+                <nav>
+                    <ul>
+                        <li> <a href="/index.html">Inicio</a></li>
+                        <li><a href="/historia.html">Museo</a></li> 
+                        <li><a href="/exposiciones.html">Exposiciones</a></li> 
+                        <li><a href="/tienda.html">Tienda</a></li> 
+                        <li><a href="/contacto.html">Contacto</a></li> 
+                    </ul>
+                </nav>
+            </div>
+        </header>
                 <!-- Portada inicio -->               
                 <main class="main-inicio">
                     <div class="container-info">
@@ -66,7 +64,7 @@
                             </ul>
                         </div>
                     </div>
-                </div>
+                </main>
 
                 <div class="wave" style="height: 150px; overflow: hidden;">
                     <svg
@@ -112,15 +110,15 @@
                         todo el mundo fue capaz de contemplarlas.</h5><br><br>
                 </element>
                 <img src="/Imagenes/Img3.png" class="Imagen3">
-            <div class="bottom">
-                <h5>La muestra estará disponible desde inicios de Octubre hasta finales de diciembre, con entradas limitadas debido 
-                    a protocolo del museo.</h5>
-                <a href="https://api.whatsapp.com/send?phone=542644194074&amp">   
-                    <i button class="btn">Comprar entrada</button></i>
-                </a>
-                <br><br>
+                <div class="bottom">
+                    <h5>La muestra estará disponible desde inicios de Octubre hasta finales de diciembre, con entradas limitadas debido 
+                        a protocolo del museo.</h5>
+                    <a href="https://api.whatsapp.com/send?phone=542644194074&amp">   
+                        <i button class="btn">Comprar entrada</button></i>
+                    </a>
+                    <br><br>
 
-            </div>
+                </div>
                 <!-- <img src="/Imagenes/Img4.png" Class="Imagen4"> -->
             </section>
 
@@ -132,9 +130,7 @@
                         
                         <a href="historia.html">Nosotros</a>
                         <a href="exposiciones.html">Agenda</a>
-                        <a href="contacto.html">Contacto</a>
-
-                  
+                        <a href="contacto.html">Contacto</a>                
                      
                         <!-- Redes sociales --> 
                     <div class="social-content">

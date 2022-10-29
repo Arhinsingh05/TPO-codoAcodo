@@ -1,9 +1,3 @@
-let menu = document.querySelector("#menu")
-let boton = document.querySelector("#boton-icon")
-
-boton.addEventListener("click", function() {
-    menu.classList.boton("menu-on");
-})
 
 
 /* Desplazamiento del header */

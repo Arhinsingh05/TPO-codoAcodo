@@ -35,68 +35,238 @@ header {
     width: 100%;
 }
 
-.header .main {
+header .contenedor {
     width: 90%;
     margin: 0 auto;
 }
 
-.navbar {
+.contenedor {
     margin-top: 30px;
     padding-bottom: 10px;
 }
 
-.navbar .brand {
+.contenedor .brand {
     display: flex;
     margin: 20px 70px;
     color: rgba(225,166,214,255);
 }
 
-.navbar .brand i {
+.contenedor .brand i {
     font-size: 1.4em;
-    margin-top: 0.35rem;
+    margin-right: 0.35em;
+    margin-top: 0.20em;
 }
 
-.navbar .brand h3 {
+.contenedor .brand h3 {
     font-size: 1.3em;
     margin: 5px 5px;
 }
 
-.menu ul{
+nav ul{
     display: flex;
     justify-content: center;
     margin: 0px 20px;
 
 }
 
-.menu ul li{
+nav ul li{
     list-style: none;
     margin-right: 70px;
 
 }
 
-.menu ul li a{
+nav ul li a{
     color: rgba(254,209,188,255);
     text-decoration: none;
     font-size: 1.3em;
 }
 
-.menu ul li a:hover {
+nav ul li a:hover {
     color: rgba(225,166,214,255);
 }
 
-.navbar .boton-menu {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 25px;
+header div.contenedor {
+    place-content: flex-start;
+
 }
 
-.navbar .boton-menu i {
-    font-size: 1.8em;
-    cursor: pointer;
-    color: white;
-    
-    display: none;  /*Oculto en pantalla grande, solo aparece en pantalla chica */
+header div.contenedor nav {
+    display: flex;
+    place-content: space-around;
 }
+
+
+#menu, #menu-check {
+    display: none;
+}
+
+@media only screen and (max-width: 900px) {
+    header div.contenedor, header div.contenedor ul, header div.contenedor ul li {
+        display: inline;
+
+    }
+    header div.contenedor nav {
+        display: inline;
+    }
+        
+}
+
+@media only screen and (max-width:700px){
+
+    header div.contenedor{
+        display: flex;
+        place-content: space-between;
+    }
+
+
+    #menu-check:not(checked) ~ nav {
+        display: none;
+    }
+    #menu-check:checked ~ nav {
+        display: block;
+    }
+    #menu {
+        display: block;
+        color: rgba(1,128,181,255);
+        background-color: rgba(225,166,214,255);
+        font-weight: bold;
+        font-size: 1.2em;
+        border:  3px solid rgba(1,128,181,255);
+        border-radius: 0.3em;
+        position: absolute;
+        right: 0.5em;
+        top: 0.5em;
+        z-index: 9999;
+    }
+
+    #menu:hover {
+        color: rgba(225,166,214,255);
+        background-color: rgba(1,128,181,255);
+    }
+
+    #menu-cerrar {
+        display: none;
+    }
+
+    #menu-check:checked ~ label #menu-abrir {
+        display: none;
+    }
+
+    #menu-check:checked ~ label #menu-cerrar {
+        display: block;
+    }
+
+    header div.contenedor nav {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        background-color: beige;
+        padding-top: 0.5em;
+        padding-right: 1.5em;
+        opacity: 0.85;
+        color: rgba(254,209,188,255);
+        font-size: 1.2em;
+        font-family: texto, Arial, Helvetica, sans-serif;
+        font-weight: bold;
+    }
+
+    header div.contenedor nav ul,  header div.contenedor nav ul li{
+        display: block;
+        text-align: right;
+        padding: 0.7em;
+    }
+
+    header div.contenedor nav ul a {
+        color: rgba(1,128,181,255);
+        background: none;
+    }
+
+    header div.contenedor nav ul a:hover {
+        color: rgba(225,166,214,255);
+        background: none;
+    }
+
+}
+
+
+/* Para que la barra de menu se coloque como columna en pantallas de 600px para arriba */
+@media (max-width: 650px) {
+
+    .navbar .brand i{
+        margin-left: -30px;
+    }
+
+    .container-info .social-content i {
+        display: none;
+    }
+
+    .container-info {
+        flex-wrap: wrap-reverse;
+        
+    }
+
+    .container-info h1{
+        font-size: 2em;
+    }
+
+    .container-info h2{
+        font-size: 1em;
+    }
+
+    .container-info .btn {
+        font-size: 0.8em;
+    }
+
+    header .wave {
+        margin-top: 320px;
+    }
+}
+
+@keyframes left-move {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes right-move {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes up-move {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+
+
+
+
+
+
+
 
 .container-info {
     display: flex;
@@ -766,103 +936,3 @@ footer {
 
 }
 
-
-/* Para que la barra de menu se coloque como columna en pantallas de 600px para arriba */
-@media (max-width: 650px) {
-
-    .navbar .brand i{
-        margin-left: -30px;
-    }
-
-    .navbar .boton-menu i {
-        display: block;
-        margin: -60px 30px;
-    }
-
-    .navbar .menu ul {
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-        width: 100%;
-        height: 100%;
-        z-index: 1;
-        background-color: hsl(37, 13%, 19%);
-        position: fixed;
-        margin-top: 40px;
-        
-        /* Llevo el menu hacia la izq: */
-        transform: translateX(-120%);
-        transition: 1s ease-in;
-    }
-
-    /* Esta clase la asigno con js para traer el menu */
-    .navbar .menu .menu-on {
-        transform: translateX(100%);
-    }
-
-    .navbar .menu ul li {
-        margin: 30px;
-        text-transform: uppercase;
-    }
-
-    .container-info .social-content i {
-        display: none;
-    }
-
-    .container-info {
-        flex-wrap: wrap-reverse;
-        
-    }
-
-    .container-info h1{
-        font-size: 2em;
-    }
-
-    .container-info h2{
-        font-size: 1em;
-    }
-
-    .container-info .btn {
-        font-size: 0.8em;
-    }
-
-    header .wave {
-        margin-top: 320px;
-    }
-}
-
-@keyframes left-move {
-    0% {
-        opacity: 0;
-        transform: translateX(-100px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateX(0px);
-    }
-}
-
-@keyframes right-move {
-    0% {
-        opacity: 0;
-        transform: translateX(100px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateX(0px);
-    }
-}
-
-@keyframes up-move {
-    0% {
-        opacity: 0;
-        transform: translateY(100px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0px);
-    }
-}
