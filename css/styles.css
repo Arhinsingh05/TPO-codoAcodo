@@ -54,7 +54,7 @@ header .contenedor {
 .contenedor .brand i {
     font-size: 1.4em;
     margin-right: 0.35em;
-    margin-top: 0.20em;
+    margin-top: 0.45em;
 }
 
 .contenedor .brand h3 {
@@ -590,6 +590,7 @@ footer {
 .contenido{
     background-color: beige;
     padding: 2em;
+    text-align: justify;
 }
 
 .contenido .Historia {
@@ -615,17 +616,15 @@ footer {
     color: rgba(1,128,181,255);
     font-family: titulo;
     /* font-size: 7vh; */
-    text-align: left;
     opacity: 100;
 }
-.contenido .Histroia h5{
-    text-align: justify;
-}
-.contenido .Historia video {
+
+video {
     height: 30vw;
     width: 30vw;
     margin-left: 15vw;
     opacity: 0;
+    padding-left: 5em;
 }
 .contenido .Historia:hover video {
     height: 30vw;
@@ -1061,7 +1060,7 @@ footer {
 
 .sucursal-title, iframe {
     font-size: 1rem;
-    margin: 1vw 0px 0px 15vw;
+    margin: 1vw 0px 0px 5vw;
     color: rgba(1,128,181,255);
     justify-content: space-between;
 
